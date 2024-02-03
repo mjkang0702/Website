@@ -2,9 +2,44 @@
 <html lang="en">
 <head>
     <title>MK Portfolio</title>
+    <style>
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #c6ccbd;
+      }
+      
+      li {
+        float: left;
+      }
+      
+      li a {
+        display: block;
+        color: #424240;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;
+      }
+      
+      li a:hover:not(.active) {
+        background-color: #d8c3a5;
+      }
+      
+      .active {
+        background-color: #c9ad83;
+      }
+      </style>
 </head>
 <body>
-    <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Minjae Kang</h1>
+     <ul>
+    <li><a class="active" href="#home">Minjae Kang</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+  </ul>
   
     <div class="container">
         <div class="overlay"></div>
