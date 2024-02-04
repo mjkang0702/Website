@@ -35,6 +35,13 @@
         .active {
           background-color: #c9ad83;
         }
+        .first {
+          text-align: center;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          font-weight: bold;
+          padding-top: 10px;
+          font-size: 25px;
+        }
       </style>
 </head>
 <body>
@@ -43,6 +50,67 @@
         <li><a href="about.html">About</a></li>
         <li><a class="active" href="portfolio.html">Portfolio</a></li>
       </ul>
+
+      <div class="first">
+        <h1>Portfolio</h1>
+      </div>
+    
+      <div class="container">
+        <div class="overlay"></div>
+        <div class="card"></div>
+      </div>
+      
+      <script>
+        var container = document.querySelector('.container')
+        var overlay = document.querySelector('.overlay')
+        container.addEventListener('mousemove', function(e){
+          var x = e.offsetX
+          var y = e.offsetY
+          var rotateY = 4/30 * x - 20
+          var rotateX = -1/5 * y + 20
+      
+          overlay.style = `background-position : ${x/5 + y/5}%; filter : opacity(${x/200}) brightness(1.2)`
+      
+          container.style = `transform : perspective(350px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`
+        })
+      
+        container.addEventListener('mouseout', function(){
+          overlay.style = 'filter : opacity(0)'
+          container.style = 'transform : perspective(350px) rotateY(0deg) rotateX(0deg)'
+        })
+     
+      
+      </script>
+      
+      <style>
+        .container {
+          width: 300px; height: 220px; transition : all 0.1s;
+          position: relative;
+          padding-left: 50px;
+          padding-top: 10px;
+        }
+        .overlay {
+          position: absolute;
+          width: 300px;
+          height: 220px;
+          background: linear-gradient(105deg,
+          transparent 40%,
+          rgba(255, 219, 112, 0.8) 45%,
+          rgba(132, 50, 255 ,0.6) 50%,
+          transparent 54%);
+          filter: brightness(1.1) opacity(0.8);
+          mix-blend-mode: color-dodge;
+          background-size: 150% 150%;
+          background-position: 100%;
+          transition: all 0.1s;
+        }
+        .card {
+          width: 300px; height: 220px;
+          background-image: url(https://github.com/mjkang0702/mjkang0702.github.io/blob/main/mask.jpg?raw=true);
+          background-size: cover;
+        }
+        
+      </style>
     <body style="background-color: #Eae7dc;"></body>
 </body>
 </html>
