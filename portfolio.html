@@ -72,8 +72,8 @@
         container.addEventListener('mousemove', function(e){
           var x = e.offsetX
           var y = e.offsetY
-          var rotateY = 2/15 * x - 10
-          var rotateX = -0.5/2.5 * y + 10
+          var rotateY = 6/45 * x - 30
+          var rotateX = -1.5/7.5 * y + 30
       
           overlay.style = `background-position : ${x/5 + y/5}%; filter : opacity(${x/200}) brightness(1.2)`
       
@@ -94,8 +94,8 @@
         container1.addEventListener('mousemove', function(e){
           var x = e.offsetX
           var y = e.offsetY
-          var rotateY = 2/15 * x - 10
-          var rotateX = -0.5/2.5 * y + 10
+          var rotateY = 6/45 * x - 30
+          var rotateX = -1.5/7.5 * y + 30
       
           overlay1.style = `background-position : ${x/5 + y/5}%; filter : opacity(${x/200}) brightness(1.2)`
       
@@ -113,7 +113,7 @@
       <style>
         .container {
           width: 450px; height: 330px; transition : all 0.1s;
-          position: absolute;
+          position: relative;
           padding-left: 100px;
           padding-top: 10px;
         }
@@ -142,7 +142,7 @@
     <style>
         .container1 {
           width: 450px; height: 330px; transition : all 0.1s;
-          position: absolute;
+          position: relative;
           padding-left: 100px;
           padding-top: 10px;
         }
