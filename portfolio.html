@@ -71,12 +71,12 @@
       
           overlay.style = `background-position : ${x/5 + y/5}%; filter : opacity(${x/200}) brightness(1.2)`
       
-          container.style = `transform : perspective(350px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`
+          container.style = `transform : perspective(300px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`
         })
       
         container.addEventListener('mouseout', function(){
           overlay.style = 'filter : opacity(0)'
-          container.style = 'transform : perspective(350px) rotateY(0deg) rotateX(0deg)'
+          container.style = 'transform : perspective(300px) rotateY(0deg) rotateX(0deg)'
         })
      
       
