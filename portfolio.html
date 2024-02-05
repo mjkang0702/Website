@@ -94,8 +94,9 @@
         container1.addEventListener('mousemove', function(e){
           var x = e.offsetX
           var y = e.offsetY
-          var rotateY = 6/45 * y - 30
-          var rotateX = -2.5/12.5 * x + 50
+          var rotateY = (4/30 * x - 20)*0.5
+          var rotateX = (-1/5 * y + 20)*0.5
+
       
           overlay1.style = `background-position : ${x/5 + y/5}%; filter : opacity(${x/200}) brightness(1.2)`
       
