@@ -94,8 +94,9 @@
         container1.addEventListener('mousemove', function(e){
           var x = e.offsetX
           var y = e.offsetY
-          var rotateY = (4/30 * x - 20)*0.5
-          var rotateX = (-1/5 * y + 20)*0.5
+          var rotateY = (4/30*0.3) * x - (20*0.3)
+          var rotateX = (-1/5*0.3) * y + (20*0.3)
+          
 
       
           overlay1.style = `background-position : ${x/5 + y/5}%; filter : opacity(${x/200}) brightness(1.2)`
@@ -153,8 +154,8 @@
           height: 560px;
           background: linear-gradient(105deg,
           transparent 40%,
-          rgba(255, 219, 112, 0.8) 45%,
-          rgba(132, 50, 255 ,0.6) 50%,
+          rgba(230, 15, 15, 0.8) 45%,
+          rgba(253, 230, 25, 0.6) 50%,
           transparent 54%);
           filter: brightness(1.1) opacity(0.8);
           mix-blend-mode: color-dodge;
